@@ -30,7 +30,7 @@ const UnspentTxOutsTable = (props) => {
                             <TableCell className={classes.tableCell2}><Link>{row.txOutTransactionId}</Link></TableCell>
                             <TableCell>{row.txOutIndex}</TableCell>
                             <TableCell className={classes.tableCell2}><Link>{row.address}</Link></TableCell>
-                            <TableCell align='right'>{row.amount}</TableCell>
+                            <TableCell align='right'>{`${row.amount} HC`}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

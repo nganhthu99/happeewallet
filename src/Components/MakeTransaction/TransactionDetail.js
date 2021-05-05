@@ -55,19 +55,19 @@ const TransactionDetail = (props) => {
                                 <Table className={classes.table} aria-label="simple table">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell>Transaction Output Id</TableCell>
+                                            <TableCell className={classes.tableCell}>Transaction Output Id</TableCell>
                                             <TableCell align="right">Transaction Output Index</TableCell>
-                                            <TableCell align="right">Signature</TableCell>
+                                            <TableCell align="right" className={classes.tableCell2}>Signature</TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
                                         {detail.txIns.map((row) => (
                                             <TableRow key={row.signature}>
-                                                <TableCell component="th" scope="row">
+                                                <TableCell component="th" scope="row" className={classes.tableCell}>
                                                     <Link>{row.txOutTransactionId}</Link>
                                                 </TableCell>
                                                 <TableCell align="right">{row.txOutIndex}</TableCell>
-                                                <TableCell align="right">{row.signature}</TableCell>
+                                                <TableCell align="right" className={classes.tableCell2}>{row.signature}</TableCell>
                                             </TableRow>
                                         ))}
                                     </TableBody>
@@ -87,14 +87,14 @@ const TransactionDetail = (props) => {
                                 <Table className={classes.table} aria-label="simple table">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell>Receiver Address</TableCell>
+                                            <TableCell className={classes.tableCell}>Receiver Address</TableCell>
                                             <TableCell align="right">Amount</TableCell>
                                         </TableRow>
                                     </TableHead>
                                     <TableBody>
                                         {detail.txOuts.map((row) => (
                                             <TableRow key={row.address}>
-                                                <TableCell component="th" scope="row">
+                                                <TableCell component="th" scope="row" className={classes.tableCell}>
                                                     <Link>{row.address}</Link>
                                                 </TableCell>
                                                 <TableCell align="right">
